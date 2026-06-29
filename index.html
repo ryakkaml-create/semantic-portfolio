@@ -12,7 +12,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -22,11 +22,11 @@
 
     <header>
 
-        <nav class="container">
+        <nav class="navbar container">
 
             <h2 class="logo">Likitha Ryakkam</h2>
 
-            <ul>
+            <ul class="nav-links">
 
                 <li><a href="#home">Home</a></li>
 
@@ -50,9 +50,7 @@
 
     </header>
 
-
-
-    <!-- ================= HERO ================= -->
+    <!-- ================= HOME ================= -->
 
     <section class="hero container" id="home">
 
@@ -62,9 +60,12 @@
 
             <h2>Likitha Ryakkam</h2>
 
+            <h3>Frontend Developer & Student</h3>
+
             <p>
 
-                Frontend Developer • Student • Web Enthusiast
+                Passionate about building modern, responsive websites using
+                HTML, CSS and JavaScript.
 
             </p>
 
@@ -78,36 +79,41 @@
 
         </div>
 
-
-
         <div class="hero-image">
 
-            <img src="profile.png" alt="Likitha">
+            <img src="profile.png" alt="Likitha Ryakkam">
 
         </div>
 
     </section>
 
-
-
     <!-- ================= ABOUT ================= -->
 
-    <section class="about container" id="about">
+    <section class="container" id="about">
 
         <h2 class="section-title">About Me</h2>
 
-        <div class="about-box">
+        <div class="about-card">
 
             <p>
 
-                I'm <strong>Likitha Ryakkam</strong> from Hyderabad.
+                Hi! I'm <strong>Likitha Ryakkam</strong> from Hyderabad.
 
-                I enjoy creating beautiful and responsive websites using
-                HTML, CSS and JavaScript.
+                I am currently pursuing my studies and improving my web
+                development skills through internships and online learning.
 
-                I'm continuously improving my development skills through
-                Springboard, Infosys, Simplilearn and my internship at
-                <strong>Thrinex</strong>.
+            </p>
+
+            <br>
+
+            <p>
+
+                I have completed learning programs from
+                <strong>Thrinex</strong>,
+                <strong>Springboard</strong>,
+                <strong>Infosys</strong>,
+                <strong>Simplilearn</strong>,
+                and actively build responsive web projects.
 
             </p>
 
@@ -115,217 +121,65 @@
 
     </section>
 
-
-
     <!-- ================= SKILLS ================= -->
 
-    <section class="skills-section container" id="skills">
+    <section class="container" id="skills">
 
         <h2 class="section-title">My Skills</h2>
 
         <div class="skills-grid">
 
-            <div class="skill-card">HTML5</div>
+            <div class="skill-box">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML5</h3>
+            </div>
 
-            <div class="skill-card">CSS3</div>
+            <div class="skill-box">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS3</h3>
+            </div>
 
-            <div class="skill-card">JavaScript</div>
+            <div class="skill-box">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
 
-            <div class="skill-card">Python</div>
+            <div class="skill-box">
+                <i class="fa-brands fa-python"></i>
+                <h3>Python</h3>
+            </div>
 
-            <div class="skill-card">SQL</div>
+            <div class="skill-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>SQL</h3>
+            </div>
 
-            <div class="skill-card">GitHub</div>
+            <div class="skill-box">
+                <i class="fa-brands fa-github"></i>
+                <h3>GitHub</h3>
+            </div>
 
         </div>
 
     </section>
 
+    <!-- ========= PROJECTS WILL COME IN PART 2 ========= -->
 
-
-    <!-- ================= PROJECTS ================= -->
-
-   <section class="projects container" id="projects">
-
-<h2 class="section-title">My Projects</h2>
-
-<p class="section-subtitle">
-Click any project to view the screenshot
-</p>
-
-<div class="projects-grid">
-
-<div class="project-card"
-onclick="openModal('project1.jpg','PhonePe Web Page','Responsive PhonePe Web Page built using HTML and CSS.')">
-
-<div class="project-icon">
-<i class="fa-solid fa-mobile-screen-button"></i>
-</div>
-
-<div>
-<h3>PhonePe Web Page</h3>
-<p>HTML • CSS</p>
-</div>
-
-</div>
-
-
-<div class="project-card"
-onclick="openModal('project2.jpg','Tic Tac Toe','Interactive Tic Tac Toe game built using HTML, CSS and JavaScript.')">
-
-<div class="project-icon">
-<i class="fa-solid fa-gamepad"></i>
-</div>
-
-<div>
-<h3>Tic Tac Toe</h3>
-<p>HTML • CSS • JavaScript</p>
-</div>
-
-</div>
-
-
-<div class="project-card"
-onclick="openModal('smart-crave.jpg','Smart Crave','Responsive Food Ordering Website.')">
-
-<div class="project-icon">
-<i class="fa-solid fa-utensils"></i>
-</div>
-
-<div>
-<h3>Smart Crave</h3>
-<p>Responsive Website</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-    <!-- ================= CERTIFICATES ================= -->
-
-   <section id="certificates" class="container">
-
-<h2 class="section-title">Certificates</h2>
-
-<div class="certificate-grid">
-
-<div class="certificate-card" onclick="openModal('thrinex-web-development-offer-letter.jpg','Thrinex Internship','Web Development Internship Offer Letter')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Thrinex Internship</h3>
-<p>Offer Letter</p>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('introduction-to-golang.jpg','Introduction to Golang','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Introduction to Golang</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('introduction-to-C-plus-plus.jpg','Introduction to C++','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Introduction to C++</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('mastering-edge-analytics.jpg','Mastering Edge Analytics','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Mastering Edge Analytics</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('full-stack-web-development.jpg','Full Stack Web Development','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Full Stack Web Development</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('reliance-foundation.jpg','Reliance Foundation','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Reliance Foundation</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('sprintM.jpg','SprintM','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>SprintM</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('dbhs.jpg','DBHS','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>DBHS</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('nss.jpg','NSS','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>NSS</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('ncc.jpg','NCC','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>NCC</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('inter-school-sports-meet.jpg','Inter School Sports Meet','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Inter School Sports Meet</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('inter-house-basketball-tournament.jpg','Inter House Basketball Tournament','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>Basketball Tournament</h3>
-</div>
-</div>
-
-<div class="certificate-card" onclick="openModal('district-basketball.jpg','District Basketball','Certificate')">
-<i class="fa-solid fa-award"></i>
-<div>
-<h3>District Basketball</h3>
-</div>
-</div>
-
-</div>
-
-</section>
-
+    <!-- ========= CERTIFICATES WILL COME IN PART 2 ========= -->
 
     <!-- ================= CONTACT ================= -->
 
-    <section class="contact container" id="contact">
+    <section class="container" id="contact">
 
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Contact</h2>
 
-        <div class="contact-box">
+        <div class="contact-card">
 
             <p><i class="fa-solid fa-location-dot"></i> Hyderabad</p>
 
-            <p><i class="fa-solid fa-envelope"></i>
-                ryakkamlikitha@gmail.com
-            </p>
+            <p><i class="fa-solid fa-envelope"></i> ryakkamlikitha@gmail.com</p>
 
-            <p><i class="fa-solid fa-phone"></i>
-                9397302020
-            </p>
+            <p><i class="fa-solid fa-phone"></i> 9397302020</p>
 
             <p>
 
@@ -356,27 +210,17 @@ onclick="openModal('smart-crave.jpg','Smart Crave','Responsive Food Ordering Web
 
     </section>
 
-
-
     <!-- ================= MODAL ================= -->
 
-    <div class="modal" id="modal">
+    <div id="imageModal" class="modal">
 
-        <div class="modal-content">
+        <span class="close">&times;</span>
 
-            <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
 
-            <img id="modalImage">
-
-            <h2 id="modalTitle"></h2>
-
-            <p id="modalDescription"></p>
-
-        </div>
+        <div id="caption"></div>
 
     </div>
-
-
 
     <script src="script.js"></script>
 
