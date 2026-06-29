@@ -271,20 +271,14 @@ header{
    PROJECTS
 =========================== */
 
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    margin-top:40px;
-}
-
 .project-card{
     background:var(--card);
     border-radius:20px;
     overflow:hidden;
     box-shadow:var(--shadow);
-    transition:.3s;
     cursor:pointer;
+    transition:0.3s;
+    text-align:center;
 }
 
 .project-card:hover{
@@ -295,54 +289,48 @@ header{
     width:100%;
     height:220px;
     object-fit:cover;
+    display:block;
 }
 
 .project-card h3{
-    font-size:22px;
-    padding:15px 20px 5px;
+    margin-top:15px;
     color:var(--primary);
+    font-size:22px;
 }
 
 .project-card p{
-    padding:0 20px 20px;
+    margin:10px 15px 20px;
     color:var(--light);
 }
-
 /* ===========================
    CERTIFICATES
 =========================== */
 
-.certificate-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
 .certificate-card{
     background:var(--card);
-    border-radius:18px;
+    border-radius:20px;
     overflow:hidden;
     box-shadow:var(--shadow);
-    transition:.3s;
     cursor:pointer;
+    transition:0.3s;
     text-align:center;
 }
 
 .certificate-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .certificate-card img{
     width:100%;
     height:180px;
     object-fit:cover;
+    display:block;
 }
 
 .certificate-card h3{
-    padding:18px;
-    font-size:18px;
+    margin:15px;
     color:var(--primary);
+    font-size:18px;
 }
 
 /* ===========================
