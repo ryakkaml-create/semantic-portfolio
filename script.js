@@ -1,68 +1,54 @@
 /* ===========================
-   DARK / LIGHT MODE
+   DARK MODE
 =========================== */
 
 const themeBtn = document.getElementById("themeBtn");
 
 themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-
-    if (currentTheme === "dark") {
-
-        document.documentElement.removeAttribute("data-theme");
-
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-
-    } else {
-
-        document.documentElement.setAttribute("data-theme", "dark");
-
+    if (document.body.classList.contains("dark")) {
         themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-
+    } else {
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
-
 });
 
 
 /* ===========================
-   PROJECT MODAL
+   IMAGE POPUP
 =========================== */
 
-const modal = document.getElementById("modal");
-
-const modalImage = document.getElementById("modalImage");
-
-const modalTitle = document.getElementById("modalTitle");
-
-const modalDescription = document.getElementById("modalDescription");
-
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const caption = document.getElementById("caption");
 const closeBtn = document.querySelector(".close");
 
-
-function openModal(image, title, description){
+function openImage(image, title) {
 
     modal.style.display = "flex";
 
-    modalImage.src = image;
+    modalImg.src = image;
 
-    modalTitle.textContent = title;
-
-    modalDescription.textContent = description;
+    caption.innerHTML = title;
 
 }
 
 
-closeBtn.onclick = function(){
+// Close button
+
+closeBtn.onclick = function () {
 
     modal.style.display = "none";
 
 }
 
 
-window.onclick = function(event){
+// Click outside image
 
-    if(event.target == modal){
+window.onclick = function (e) {
+
+    if (e.target == modal) {
 
         modal.style.display = "none";
 
@@ -71,9 +57,11 @@ window.onclick = function(event){
 }
 
 
-document.addEventListener("keydown", function(event){
+// ESC key closes popup
 
-    if(event.key === "Escape"){
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape") {
 
         modal.style.display = "none";
 
@@ -88,7 +76,7 @@ document.addEventListener("keydown", function(event){
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    anchor.addEventListener("click", function(e){
+    anchor.addEventListener("click", function (e) {
 
         e.preventDefault();
 
@@ -104,12 +92,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /* ===========================
-   ACTIVE NAV LINK
+   ACTIVE NAVIGATION
 =========================== */
 
 const sections = document.querySelectorAll("section");
-
-const navLinks = document.querySelectorAll("nav ul li a");
+const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
 
@@ -117,11 +104,9 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
 
-        const sectionHeight = section.clientHeight;
-
-        if(scrollY >= sectionTop){
+        if (window.scrollY >= sectionTop) {
 
             current = section.getAttribute("id");
 
@@ -133,7 +118,7 @@ window.addEventListener("scroll", () => {
 
         link.classList.remove("active");
 
-        if(link.getAttribute("href") === "#" + current){
+        if (link.getAttribute("href") === "#" + current) {
 
             link.classList.add("active");
 
