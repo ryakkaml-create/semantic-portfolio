@@ -1,0 +1,243 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --border: #e5e7eb;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  --transition: all 0.3s ease;
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --primary: #60a5fa;
+  --border: #334155;
+  --shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   BASE RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: var(--transition);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.container {
+  width: min(100%, 1200px);
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* =========================
+   NAVBAR (FLEXBOX)
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   HERO (GRID)
+========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+}
+
+.hero-text span {
+  color: var(--primary);
+}
+
+.hero-text p {
+  color: var(--muted);
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.3rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 3rem 0;
+}
+
+/* =========================
+   SKILLS (FLEX WRAP)
+========================= */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 2rem 0;
+}
+
+.skill {
+  background: var(--surface);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   PROJECTS (GRID)
+========================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  padding: 3rem 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLET */
+@media (min-width: 768px) {
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
