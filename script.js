@@ -1,48 +1,144 @@
-/* =========================
-   DARK / LIGHT THEME TOGGLE
-========================= */
+/* ===========================
+   DARK / LIGHT MODE
+=========================== */
 
 const themeBtn = document.getElementById("themeBtn");
 
-// check saved theme (optional improvement)
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-
-  if (savedTheme === "dark") {
-    themeBtn.textContent = "☀️";
-  }
-}
-
 themeBtn.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
 
-  if (currentTheme === "dark") {
-    document.documentElement.removeAttribute("data-theme");
-    localStorage.setItem("theme", "light");
-    themeBtn.textContent = "🌙";
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
-    themeBtn.textContent = "☀️";
-  }
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+
+    if (currentTheme === "dark") {
+
+        document.documentElement.removeAttribute("data-theme");
+
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+    } else {
+
+        document.documentElement.setAttribute("data-theme", "dark");
+
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+    }
+
 });
 
-/* =========================
-   SMOOTH SCROLL (optional UX boost)
-========================= */
 
-document.querySelectorAll("a[href^='#']").forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+/* ===========================
+   PROJECT MODAL
+=========================== */
 
-    const target = document.querySelector(this.getAttribute("href"));
+const modal = document.getElementById("modal");
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
+const modalImage = document.getElementById("modalImage");
+
+const modalTitle = document.getElementById("modalTitle");
+
+const modalDescription = document.getElementById("modalDescription");
+
+const closeBtn = document.querySelector(".close");
+
+
+function openModal(image, title, description){
+
+    modal.style.display = "flex";
+
+    modalImage.src = image;
+
+    modalTitle.textContent = title;
+
+    modalDescription.textContent = description;
+
+}
+
+
+closeBtn.onclick = function(){
+
+    modal.style.display = "none";
+
+}
+
+
+window.onclick = function(event){
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+
     }
-  });
+
+}
+
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        modal.style.display = "none";
+
+    }
+
+});
+
+
+/* ===========================
+   SMOOTH SCROLL
+=========================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
+
+
+/* ===========================
+   ACTIVE NAV LINK
+=========================== */
+
+const sections = document.querySelectorAll("section");
+
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 100;
+
+        const sectionHeight = section.clientHeight;
+
+        if(scrollY >= sectionTop){
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
 });
