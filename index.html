@@ -1,135 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Likitha | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Likitha Ryakkam | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<header>
-  <nav class="container">
-    <div class="logo">Likitha</div>
+    <!-- ================= NAVBAR ================= -->
 
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <header>
 
-    <button id="themeBtn">🌙</button>
-  </nav>
-</header>
+        <nav class="container">
 
-<main>
+            <h2 class="logo">Likitha Ryakkam</h2>
 
-<!-- HERO -->
-<section class="hero container">
+            <ul>
 
-  <div class="hero-text">
-    <h1>Hello, I'm <span>Likitha Ryakkam</span></h1>
-    <p>Student | Web Developer | Learner</p>
-    <a href="#projects" class="btn">View Projects</a>
-  </div>
+                <li><a href="#home">Home</a></li>
 
-  <img src="profile.png" alt="Profile">
+                <li><a href="#about">About</a></li>
 
-</section>
+                <li><a href="#skills">Skills</a></li>
 
-<!-- ABOUT -->
-<section id="about" class="about container">
+                <li><a href="#projects">Projects</a></li>
 
-  <div>
-    <h2>About Me</h2>
-    <p>
-      I am a student from Hyderabad passionate about web development.
-      I build simple and creative projects using HTML, CSS, Python, and SQL.
-    </p>
-  </div>
+                <li><a href="#certificates">Certificates</a></li>
 
-</section>
+                <li><a href="#contact">Contact</a></li>
 
-<!-- SKILLS -->
-<section id="skills" class="container">
+            </ul>
 
-  <h2>Skills</h2>
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
 
-  <div class="skills">
-    <span class="skill">HTML</span>
-    <span class="skill">CSS</span>
-    <span class="skill">SQL</span>
-    <span class="skill">Python</span>
-    <span class="skill">GitHub</span>
-  </div>
+        </nav>
 
-</section>
+    </header>
 
-<!-- PROJECTS -->
-<section id="projects" class="container">
 
-  <h2>Projects</h2>
 
-<div class="card">
-    <img src="project1.jpg" alt="PhonePe Web Page">
-    <div class="card-content">
-        <h3>PhonePe Web Page</h3>
-        <p>A responsive PhonePe landing page clone built using HTML and CSS.</p>
+    <!-- ================= HERO ================= -->
+
+    <section class="hero container" id="home">
+
+        <div class="hero-text">
+
+            <h1>Hello, I'm</h1>
+
+            <h2>Likitha Ryakkam</h2>
+
+            <p>
+
+                Frontend Developer • Student • Web Enthusiast
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn">View Projects</a>
+
+                <a href="#contact" class="btn-outline">Contact Me</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-image">
+
+            <img src="profile.png" alt="Likitha">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about container" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-box">
+
+            <p>
+
+                I'm <strong>Likitha Ryakkam</strong> from Hyderabad.
+
+                I enjoy creating beautiful and responsive websites using
+                HTML, CSS and JavaScript.
+
+                I'm continuously improving my development skills through
+                Springboard, Infosys, Simplilearn and my internship at
+                <strong>Thrinex</strong>.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="skills-section container" id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">HTML5</div>
+
+            <div class="skill-card">CSS3</div>
+
+            <div class="skill-card">JavaScript</div>
+
+            <div class="skill-card">Python</div>
+
+            <div class="skill-card">SQL</div>
+
+            <div class="skill-card">GitHub</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="projects container" id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <p class="section-subtitle">
+
+            Click any project to view its screenshot
+
+        </p>
+
+
+
+        <div class="projects-grid">
+
+
+
+            <div class="project-card"
+
+                onclick="openModal('project1.jpg',
+                'PhonePe Web Page',
+                'Responsive PhonePe landing page built using HTML and CSS.')">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>PhonePe Web Page</h3>
+
+                    <p>HTML • CSS</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card"
+
+                onclick="openModal('project2.jpg',
+                'Tic Tac Toe',
+                'Interactive JavaScript Tic Tac Toe game.')">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>Tic Tac Toe</h3>
+
+                    <p>HTML • CSS • JavaScript</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card"
+
+                onclick="openModal('smart-crave.jpg',
+                'Smart Crave',
+                'Food ordering website with modern responsive UI.')">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>Smart Crave</h3>
+
+                    <p>Responsive Food Website</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section class="container" id="certificates">
+
+        <h2 class="section-title">Certificates</h2>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <div>
+
+                    <h3>Springboard</h3>
+
+                    <p>Web Development</p>
+
+                </div>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <div>
+
+                    <h3>Infosys</h3>
+
+                    <p>Learning Program</p>
+
+                </div>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <div>
+
+                    <h3>Simplilearn</h3>
+
+                    <p>SkillUp Courses</p>
+
+                </div>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <div>
+
+                    <h3>Thrinex</h3>
+
+                    <p>Web Development Internship</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact container" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-box">
+
+            <p><i class="fa-solid fa-location-dot"></i> Hyderabad</p>
+
+            <p><i class="fa-solid fa-envelope"></i>
+                ryakkamlikitha@gmail.com
+            </p>
+
+            <p><i class="fa-solid fa-phone"></i>
+                9397302020
+            </p>
+
+            <p>
+
+                <a href="https://github.com/ryakkaml-create" target="_blank">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    GitHub
+
+                </a>
+
+            </p>
+
+            <p>
+
+                <a href="https://www.linkedin.com/in/likitha-ryakkam-8a2584405"
+                    target="_blank">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    LinkedIn
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <img id="modalImage">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+        </div>
+
     </div>
-</div>
 
-<div class="card">
-    <img src="project2.jpg" alt="Tic Tac Toe Game">
-    <div class="card-content">
-        <h3>Tic Tac Toe Game</h3>
-        <p>An interactive Tic Tac Toe game developed using HTML, CSS, and JavaScript.</p>
-    </div>
-</div>
 
-<div class="card">
-    <img src="smart-crave.jpg" alt="Smart Crave">
-    <div class="card-content">
-        <h3>Smart Crave</h3>
-        <p>A responsive food ordering website with a modern user interface built using HTML and CSS.</p>
-    </div>
-</div>
 
-  
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact container">
-
-  <h2>Contact</h2>
-
-  <p>Email: <a href="mailto:ryakkamlikitha@gmail.com">ryakkamlikitha@gmail.com</a></p>
-  <p>Phone: <a href="tel:9397302020">9397302020</a></p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/likitha-ryakkam-8a2584405" target="_blank">
-      Profile
-    </a>
-  </p>
-
-  <p>
-    GitHub:
-    <a href="https://github.com/ryakkaml-create" target="_blank">
-      My GitHub
-    </a>
-  </p>
-
-</section>
-
-</main>
-
-<footer>
-  © 2026 Likitha Ryakkam
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
